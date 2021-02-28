@@ -32,38 +32,36 @@ const App: () => React$Node = () => {
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
-          <Header />
+          {/*<Header />*/}
           {global.HermesInternal == null ? null : (
             <View style={styles.engine}>
               <Text style={styles.footer}>Engine: Hermes</Text>
             </View>
           )}
           <View style={styles.body}>
+            {/*Header of the the App and a small description*/}
             <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
+              <Text style={styles.sectionTitle}>SYN Weather</Text>
               <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.js</Text> Hello World
+                A weather app that lets you
+                <Text style={styles.highlight}>
+                  {' '}
+                  view the forecast of tomorrow
+                </Text>
               </Text>
             </View>
+            {/*A little bit more detail on what the app is about, how we get forcast*/}
             <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
+              <Text style={styles.sectionTitle}>How is this accomplished?</Text>
               <Text style={styles.sectionDescription}>
-                <ReloadInstructions />
+                SYN Weather will retrieve the forecast of tomorrow
+                <Text style={styles.highlight}>
+                  {' '}
+                  by using third party API to retrieve the forecast in your
+                  region.
+                </Text>
               </Text>
             </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
-              <Text style={styles.sectionDescription}>
-                <DebugInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next:
-              </Text>
-            </View>
-            <LearnMoreLinks />
           </View>
         </ScrollView>
       </SafeAreaView>
